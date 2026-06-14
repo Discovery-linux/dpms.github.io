@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>DPMS - Discovery Package Management System | Fast Linux Package Manager</title>
+    <meta name="description" content="DPMS - Discovery Package Management System. A powerful, lightweight package manager for Discovery Linux with CLI, TUI, and GUI interfaces. Fast, reliable, modular.">
+    <meta name="keywords" content="package manager, linux package management, dpms, discovery linux, package installation, dependency resolution">
+    <meta name="theme-color" content="#8b5cf6">
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <nav>
+        <a href="#" class="logo">
+            <span>🔍 DPMS</span>.sys
+        </a>
+        <ul class="nav-links">
+            <li><a href="#discovery">Discovery</a></li>
+            <li><a href="#interfaces">Interfaces</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#install">Install Suite</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Discovery Package Management System</h1>
+        <p>
+            DPMS is a revolutionary package management system engineered from the ground up for Discovery Linux. 
+            Discover, index, and manage application modules with unprecedented speed and predictable reliability.
+        </p>
+        <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+            <a href="#install" style="text-decoration: none;"><button class="btn-primary">Get Started</button></a>
+            <a href="#discovery" style="text-decoration: none;"><button class="btn-secondary">Explore Registry</button></a>
+        </div>
+    </header>
+
+    <main style="max-w: 1100px; margin: 0 auto; padding: 0 1.5rem; position: relative; z-index: 1;">
+        
+        <section id="discovery" style="padding: 4rem 0;">
+            <h2>Ecosystem Architecture</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <div class="feature-card">
+                    <span class="feature-icon">🎯</span>
+                    <h3>Core Philosophy</h3>
+                    <p>DPMS functions on the principle that systemic operations should be entirely transactional, deterministic, and localized to minimize dependency corruption vectors.</p>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-icon">⚡</span>
+                    <h3>Why Choose DPMS?</h3>
+                    <p>Asynchronous structural engine parallel tracks repository index maps, performing routine deployment validation routines 3x faster than traditional execution pipelines.</p>
+                </div>
+            </div>
+
+            <div style="max-w: 750px; margin: 0 auto; padding: 1.5rem; background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 1rem; font-family: 'Fira Code', monospace; color: var(--accent);">🔍 Real-Time Package Filter Registry</h3>
+                <input type="text" id="searchInput" onkeyup="filterRepositoryMatrix()" placeholder="Type package reference to filter results... (e.g., python, curl, git)">
+                
+                <div style="margin-top: 1.5rem; display: grid; gap: 0.75rem;" id="repositoryWrapper">
+                    <div class="package-card" data-name="python3">
+                        <div class="package-header">
+                            <span class="package-name">python3</span>
+                            <span class="package-version">v3.11.2</span>
+                        </div>
+                        <p class="package-desc">Primary runtime interpreter, standard system configuration hooks, multi-threading support.</p>
+                    </div>
+                    <div class="package-card" data-name="openssl">
+                        <div class="package-header">
+                            <span class="package-name">openssl</span>
+                            <span class="package-version">v3.1.1</span>
+                        </div>
+                        <p class="package-desc">Cryptographic tools framework providing robust commercial-grade secure socket layout infrastructure.</p>
+                    </div>
+                    <div class="package-card" data-name="git">
+                        <div class="package-header">
+                            <span class="package-name">git</span>
+                            <span class="package-version">v2.41.0</span>
+                        </div>
+                        <p class="package-desc">Fast distributed tracking version control solution engineered to handle big projects with speed.</p>
+                    </div>
+                    <div class="package-card" data-name="curl">
+                        <div class="package-header">
+                            <span class="package-name">curl</span>
+                            <span class="package-version">v7.88.1</span>
+                        </div>
+                        <p class="package-desc">Command line data transfer vector platform supporting modern secure transfer protocols.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="interfaces" style="padding: 4rem 0;">
+            <h2>Three Structural Interface Modes</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+                <div class="interface-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">⌨️</div>
+                    <h3 style="color: var(--primary); margin-bottom: 0.5rem;">CLI Environment</h3>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">Lightning fast execution pipelines built for system automation scripts and headless server deployments.</p>
+                </div>
+                <div class="interface-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">📟</div>
+                    <h3 style="color: var(--accent); margin-bottom: 0.5rem;">TUI Matrix Dashboard</h3>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">Interactive viewport menu tracking with visual mouse selection arrays, fully isolated from window managers.</p>
+                </div>
+                <div class="interface-card">
+                    <div style="font-size: 2rem; margin-bottom: 1rem;">🖥️</div>
+                    <h3 style="color: var(--light-text); margin-bottom: 0.5rem;">GUI Workstation Client</h3>
+                    <p style="color: var(--muted-text); font-size: 0.9rem;">Elegant localized monitoring desktop layout featuring deep memory profiling tracking telemetry maps.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" style="padding: 4rem 0;">
+            <h2>Engine Mechanics Matrix</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div class="feature-card">
+                    <h3>Modular Architecture Plugins</h3>
+                    <p>Extend target deployment feeds through completely isolated sandboxed package index source locations.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Deterministic Integrity Auditing</h3>
+                    <p>Cryptographic internal checking routines cross-reference manifest files out-of-the-box using GPG validation arrays.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Asynchronous Tracking Pipelines</h3>
+                    <p>Parallel processing download vectors decouple complex tree arrays to guarantee operational performance limits.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="install" style="padding: 4rem 0;">
+            <h2>Onboarding Target Deployments</h2>
+            
+            <div class="install-container">
+                <div class="tabs">
+                    <button class="tab-btn active" id="tab-curl" onclick="switchInstallTab('curl')">Automated Pipeline</button>
+                    <button class="tab-btn" id="tab-source" onclick="switchInstallTab('source')">Source Compilation</button>
+                    <button class="tab-btn" id="tab-apt" onclick="switchInstallTab('apt')">Apt Vector Upstream</button>
+                </div>
+                
+                <div class="panel-body" id="panel-curl">
+                    <span class="command-text">curl -fsSL https://dpms.sh | sudo bash</span>
+                    <button class="copy-btn" onclick="executeOnboardCopy('curl -fsSL https://dpms.sh | sudo bash')">Copy Command</button>
+                </div>
+                
+                <div class="panel-body" id="panel-source" style="display: none;">
+                    <span class="command-text" style="font-size: 0.8rem; line-height: 1.4;">git clone https://github.com/Discovery-linux/dpms.git && cd dpms && make native-release</span>
+                    <button class="copy-btn" onclick="executeOnboardCopy('git clone https://github.com/Discovery-linux/dpms.git && cd dpms && make native-release')">Copy Source Setup</button>
+                </div>
+                
+                <div class="panel-body" id="panel-apt" style="display: none;">
+                    <span class="command-text">sudo apt install dpms -y</span>
+                    <button class="copy-btn" onclick="executeOnboardCopy('sudo apt install dpms -y')">Copy Command</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 Discovery Linux Systems. Framework distribution assets licensed under the open-source <a href="#">MIT Protocol</a>.</p>
+    </footer>
+
+    <script>
+        // Real-Time Repository Filter Engine
+        function filterRepositoryMatrix() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const cards = document.querySelectorAll('#repositoryWrapper .package-card');
+
+            cards.forEach(card => {
+                const name = card.getAttribute('data-name').toLowerCase();
+                if (name.includes(input)) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.3s ease-out';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Onboarding Interface Tab Swapping
+        function switchInstallTab(targetKey) {
+            const variations = ['curl', 'source', 'apt'];
+            
+            variations.forEach(v => {
+                const button = document.getElementById(`tab-${v}`);
+                const panel = document.getElementById(`panel-${v}`);
+                
+                if (v === targetKey) {
+                    button.classList.add('active');
+                    panel.style.display = 'flex';
+                } else {
+                    button.classList.remove('active');
+                    panel.style.display = 'none';
+                }
+            });
+        }
+
+        // Clipboard Core Transmission
+        function executeOnboardCopy(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Command block successfully sent to system clipboard.');
+            }).catch(err => {
+                console.error('Failed processing data vector to host copy channel: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
