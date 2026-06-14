@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DPMS | Discovery Package Manager</title>
     <script src="https://tailwindcss.com"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body class="bg-slate-900 text-slate-100 font-sans antialiased scroll-smooth">
 
     <!-- ALERT BANNER: Version 1.1.0 Release Announcement -->
-    <div class="bg-gradient-to-r from-cyan-600 to-blue-600 text-center py-2 px-4 text-xs font-semibold tracking-wide text-white flex items-center justify-center gap-2 relative z-50">
-        <span class="bg-cyan-800 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full border border-cyan-400/30">New Release</span>
+    <div class="alert-banner bg-gradient-to-r from-cyan-600 to-blue-600 text-center py-2 px-4 text-xs font-semibold tracking-wide text-white flex items-center justify-center gap-2 relative z-50">
+        <span class="alert-badge bg-cyan-800 text-[10px] uppercase font-bold px-2 py-0.5 rounded-full border border-cyan-400/30">New Release</span>
         <span>DPMS v1.1.0 is officially live! Upgraded archive tracking pipelines and enhanced multi-interface handlers are ready.</span>
         <a href="https://github.com" target="_blank" class="underline hover:text-cyan-200 ml-1 font-bold">View Release Notes &rarr;</a>
     </div>
@@ -18,7 +19,7 @@
     <!-- Navbar -->
     <nav class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
-            <span class="text-xl font-bold tracking-wider text-cyan-400">DPMS</span>
+            <span class="nav-brand text-xl font-bold tracking-wider text-cyan-400">DPMS</span>
             <div class="space-x-6 text-sm font-medium text-slate-300 hidden md:flex">
                 <a href="#interfaces" class="hover:text-cyan-400 transition">Interfaces</a>
                 <a href="#features" class="hover:text-cyan-400 transition">Features</a>
@@ -27,7 +28,7 @@
                 <a href="#install" class="hover:text-cyan-400 transition">Installation</a>
                 <a href="#team" class="hover:text-cyan-400 transition">Team</a>
             </div>
-            <a href="https://github.com" target="_blank" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 px-4 py-2 rounded font-semibold text-sm transition">GitHub</a>
+            <a href="https://github.com" target="_blank" class="btn-primary bg-cyan-500 hover:bg-cyan-600 text-slate-900 px-4 py-2 rounded font-semibold text-sm transition">GitHub</a>
         </div>
     </nav>
 
@@ -36,13 +37,13 @@
         <h1 class="text-5xl font-extrabold tracking-tight bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent sm:text-6xl">
             Discovery Package Manager
         </h1>
-        <p class="mt-4 text-xs font-mono uppercase tracking-widest text-slate-500">By The Discovery Team</p>
+        <p class="subtitle mt-4 text-xs font-mono uppercase tracking-widest text-slate-500">By The Discovery Team</p>
         <p class="mt-6 text-lg text-slate-400 max-w-2xl mx-auto">
             A lightweight, nimble package manager designed natively for the Discovery Linux project. Engineered to bring maximum agility to modern software deployment.
         </p>
         <div class="mt-10 flex justify-center gap-4">
-            <a href="#install" class="bg-cyan-500 hover:bg-cyan-600 text-slate-900 px-6 py-3 rounded font-bold shadow-lg shadow-cyan-500/20 transition">Install DPMS</a>
-            <a href="#simulator" class="bg-slate-800 hover:bg-slate-700 text-slate-100 px-6 py-3 rounded font-bold border border-slate-700 transition">Run Live Demo</a>
+            <a href="#install" class="btn-primary">Install DPMS</a>
+            <a href="#simulator" class="btn-secondary">Run Live Demo</a>
         </div>
     </header>
 
@@ -50,15 +51,15 @@
     <section id="interfaces" class="max-w-5xl mx-auto px-4 py-12 border-t border-slate-800">
         <h2 class="text-center text-sm font-mono uppercase text-slate-500 tracking-widest mb-6">Multi-Interface Framework</h2>
         <div class="grid sm:grid-cols-3 gap-4 text-center">
-            <div class="p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
+            <div class="interface-card p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
                 <span class="text-xs font-mono bg-cyan-500/10 text-cyan-400 px-2 py-1 rounded">CLI Mode</span>
                 <p class="text-xs text-slate-400 mt-2">Lightning fast execution parameters built directly for terminal keyboard professionals.</p>
             </div>
-            <div class="p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
+            <div class="interface-card p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
                 <span class="text-xs font-mono bg-blue-500/10 text-blue-400 px-2 py-1 rounded">TUI Mode</span>
                 <p class="text-xs text-slate-400 mt-2">Interactive terminal-based graphical menus mapped safely inside your active shells.</p>
             </div>
-            <div class="p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
+            <div class="interface-card p-4 bg-slate-800/30 rounded-lg border border-slate-800/60">
                 <span class="text-xs font-mono bg-purple-500/10 text-purple-400 px-2 py-1 rounded">GUI Mode</span>
                 <p class="text-xs text-slate-400 mt-2">An intuitive, beginner-friendly mouse-driven environment for absolute computing comfort.</p>
             </div>
@@ -70,29 +71,29 @@
         <h2 class="text-3xl font-bold text-center mb-2">Interactive Shell Simulator</h2>
         <p class="text-slate-400 text-center mb-8">Click the executable command presets to see the DPMS environment system output engine respond.</p>
         
-        <div class="bg-black/70 rounded-xl border border-slate-800 shadow-2xl overflow-hidden max-w-2xl mx-auto">
+        <div class="terminal bg-black/70 rounded-xl border border-slate-800 shadow-2xl overflow-hidden max-w-2xl mx-auto">
             <!-- Terminal Header -->
-            <div class="bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-800">
-                <div class="w-3 h-3 rounded-full bg-red-500"></div>
-                <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
-                <div class="w-3 h-3 rounded-full bg-green-500"></div>
+            <div class="terminal-header bg-slate-900 px-4 py-3 flex items-center gap-2 border-b border-slate-800">
+                <div class="terminal-dot w-3 h-3 rounded-full red bg-red-500"></div>
+                <div class="terminal-dot w-3 h-3 rounded-full yellow bg-yellow-500"></div>
+                <div class="terminal-dot w-3 h-3 rounded-full green bg-green-500"></div>
                 <span class="text-xs font-mono text-slate-500 ml-2">discovery-guest@bash:~</span>
             </div>
             <!-- Terminal Body -->
-            <div class="p-5 font-mono text-sm min-h-[220px] text-slate-300 space-y-4">
+            <div class="terminal-body p-5 font-mono text-sm min-h-[220px] text-slate-300 space-y-4">
                 <div class="flex items-center gap-2">
-                    <span class="text-emerald-400">discovery-guest$</span>
+                    <span class="terminal-command text-emerald-400">discovery-guest$</span>
                     <span id="terminalCommand" class="text-cyan-400">dpms --help</span>
                 </div>
-                <div id="terminalOutput" class="text-xs leading-relaxed text-slate-400 whitespace-pre font-mono">
+                <div id="terminalOutput" class="terminal-output text-xs leading-relaxed text-slate-400 whitespace-pre font-mono">
 <!-- Default dynamic content is filled here -->
                 </div>
             </div>
             <!-- Interactive Action Trigger Buttons -->
-            <div class="bg-slate-900/60 px-4 py-3 border-t border-slate-800 flex flex-wrap gap-2 justify-center">
-                <button onclick="runCommand('help')" class="text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms --help</button>
-                <button onclick="runCommand('version')" class="text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms --version</button>
-                <button onclick="runCommand('install')" class="text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms install openssl</button>
+            <div class="terminal-buttons bg-slate-900/60 px-4 py-3 border-t border-slate-800 flex flex-wrap gap-2 justify-center">
+                <button onclick="runCommand('help')" class="terminal-button text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms --help</button>
+                <button onclick="runCommand('version')" class="terminal-button text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms --version</button>
+                <button onclick="runCommand('install')" class="terminal-button text-xs font-mono bg-slate-800 hover:bg-slate-700 text-cyan-400 px-3 py-1.5 rounded border border-slate-700 transition">dpms install</button>
             </div>
         </div>
     </section>
@@ -101,18 +102,18 @@
     <section id="features" class="max-w-6xl mx-auto px-4 py-16 border-t border-slate-800">
         <h2 class="text-3xl font-bold text-center mb-12">System Mechanics</h2>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
-                <div class="text-cyan-400 text-2xl mb-3">⚡</div>
+            <div class="feature-card p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                <div class="feature-icon text-cyan-400 text-2xl mb-3">⚡</div>
                 <h3 class="text-xl font-semibold mb-2">Resource Agnostic</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Runs smoothly on extremely slow configurations or resource-constrained target hosts without structural bottlenecks.</p>
             </div>
-            <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
-                <div class="text-cyan-400 text-2xl mb-3">📦</div>
+            <div class="feature-card p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                <div class="feature-icon text-cyan-400 text-2xl mb-3">📦</div>
                 <h3 class="text-xl font-semibold mb-2">Archiving Engine</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Natively packs and bundles any local folder architecture on your machine into standard tar.xz or tar.gz binaries instantly.</p>
             </div>
-            <div class="p-6 bg-slate-800/50 rounded-xl border border-slate-800">
-                <div class="text-cyan-400 text-2xl mb-3">🔄</div>
+            <div class="feature-card p-6 bg-slate-800/50 rounded-xl border border-slate-800">
+                <div class="feature-icon text-cyan-400 text-2xl mb-3">🔄</div>
                 <h3 class="text-xl font-semibold mb-2">Frequent Syncs</h3>
                 <p class="text-slate-400 text-sm leading-relaxed">Maintained and deployed with rapid release cycles to outpace legacy package distribution managers safely.</p>
             </div>
@@ -125,7 +126,7 @@
         <p class="text-slate-400 text-center mb-4">Explore core utilities maintained in the official x86_64 distribution tree.</p>
         
         <div class="text-center mb-8">
-            <a href="https://github.com-pkg-x86_64" target="_blank" class="inline-flex items-center text-xs font-mono text-cyan-400 hover:underline">
+            <a href="https://github.com/Discovery-linux/dpms-pkg-x86_64" target="_blank" class="inline-flex items-center text-xs font-mono text-cyan-400 hover:underline">
                 <span>View Source Tree: Discovery-linux/dpms-pkg-x86_64</span>
                 <span class="ml-1">↗</span>
             </a>
@@ -141,4 +142,97 @@
         </div>
     </section>
 
-    <!-- Detailed Installation Guide Section -->
+    <!-- Footer -->
+    <footer class="border-t border-slate-800 bg-slate-900/50 py-8 mt-16">
+        <div class="max-w-6xl mx-auto text-center px-4">
+            <p class="text-slate-400 text-sm">© 2026 Discovery Linux. All rights reserved.</p>
+            <p class="text-slate-500 text-xs mt-2">Built with ❤️ for Linux enthusiasts</p>
+        </div>
+    </footer>
+
+    <script>
+        // Terminal simulator functionality
+        const outputs = {
+            help: `Usage: dpms [COMMAND] [OPTIONS]
+
+Commands:
+  install     Install packages from repository
+  remove      Remove installed packages
+  search      Search for packages
+  list        List installed packages
+  update      Update package database
+  upgrade     Upgrade installed packages
+  info        Show package information
+
+Options:
+  --help      Show this help message
+  --version   Show version information
+  -y, --yes   Skip confirmation prompts`,
+
+            version: `DPMS - Discovery Package Manager
+Version: 1.1.0
+Build: 2026-06-14
+Platform: x86_64-linux-gnu
+
+© 2026 Discovery Linux Team`,
+
+            install: `Resolving dependencies...
+[████████████████░░] 78% - Processing...
+
+Downloading packages:
+  python3 (3.11.2) ................ ✓
+  openssl (3.1.1) .................. ✓
+  zlib (1.2.13) .................... ✓
+
+Installing:
+  python3 ......................... ✓
+  openssl ......................... ✓
+  zlib ........................... ✓
+
+Installation complete! 3 packages installed.`
+        };
+
+        function runCommand(cmd) {
+            const output = outputs[cmd] || 'Command not found.';
+            document.getElementById('terminalOutput').textContent = output;
+            document.getElementById('terminalCommand').textContent = `dpms --${cmd}`;
+        }
+
+        // Initialize with help output
+        window.addEventListener('load', () => {
+            runCommand('help');
+        });
+
+        // Package search functionality
+        const packages = [
+            { name: 'python3', desc: 'Python programming language' },
+            { name: 'openssl', desc: 'SSL/TLS toolkit' },
+            { name: 'zlib', desc: 'Compression library' },
+            { name: 'git', desc: 'Version control system' },
+            { name: 'curl', desc: 'Data transfer utility' },
+            { name: 'wget', desc: 'Web downloader' }
+        ];
+
+        document.getElementById('searchInput').addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            const list = document.getElementById('packageList');
+            
+            if (!query) {
+                list.innerHTML = '';
+                return;
+            }
+
+            const filtered = packages.filter(pkg => 
+                pkg.name.includes(query) || pkg.desc.includes(query)
+            );
+
+            list.innerHTML = filtered.map(pkg => `
+                <div class="package-item bg-slate-800/40 border border-slate-700/50 rounded px-4 py-3 hover:border-cyan-400 transition">
+                    <div class="package-name text-cyan-400 font-mono">${pkg.name}</div>
+                    <div class="package-desc text-slate-400 text-sm">${pkg.desc}</div>
+                </div>
+            `).join('');
+        });
+    </script>
+</body>
+</html>
